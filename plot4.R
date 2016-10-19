@@ -27,9 +27,10 @@ with(febData, plot(dateTime, Global_active_power, type = "l", xlab = "", ylab ="
 with(febData, plot(dateTime, Sub_metering_1,type = "l", xlab="", ylab="Energy sub metering"))
 points(febData$dateTime, febData$Sub_metering_2, type = "l", col ="red")
 points(febData$dateTime, febData$Sub_metering_3, type = "l", col ="blue")
-legend("topright", lty="solid", col = c("black", "red", "blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright", lty="solid", col = c("black", "red", "blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), bty = "n")
 
 with(febData, plot(dateTime, Voltage, type ="l", xlab ="datetime",  ylab = "Voltage"))
 
 with(febData, plot(dateTime, Global_reactive_power, type ="l", xlab ="datetime"))
 dev.off()
+#End
